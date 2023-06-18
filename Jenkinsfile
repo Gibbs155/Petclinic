@@ -2,26 +2,26 @@ pipeline {
     agent any
     
     tools{
-        jdk 'jdk11'
+        jdk 'jdk112'
         maven 'maven3'
     }
 
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/jaiswaladi246/Petclinic.git'
+                git branch: 'main', url: 'https://github.com/Gibbs155/Petclinic.git'
             }
         }
         
         stage('Compile') {
             steps {
-               sh "mvn clean compile"
+               sh "mvn clean"
             }
         }
         
         stage('Build') {
             steps {
-               sh "mvn clean package -DskipTests=true"
+               sh "mvn package -DskipTests=true"
             }
         }
         
