@@ -9,7 +9,7 @@ bin/
 *.iml
 
 # Maven
-target/
+# target/
 
 # OS
 .DS_Store
